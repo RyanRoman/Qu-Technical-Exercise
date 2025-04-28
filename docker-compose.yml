@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: powerx
+      POSTGRES_USER: powerx
+      POSTGRES_PASSWORD: powerx
+    volumes:
+      - ./db/init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+  api:
+    build: .
+    depends_on:
+      - postgres
+    environment:
+      - DATABASE_URL=postgresql://powerx:powerx@postgres:5432/powerx
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"

@@ -1,0 +1,14 @@
+info:
+  title: Monolith
+  version: '1.0'
+openapi: 3.0.0
+paths:
+  /v1/brands/{brand_id}/metadata:
+    get:
+      summary: Brand meta
+  /v1/electric_sensors/{sensor_id}:
+    get:
+      summary: Sensor meta
+  /v1/locations/{location_id}/circuit-summary:
+    get:
+      summary: Location summary

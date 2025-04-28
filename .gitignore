@@ -1,0 +1,21 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Docker
+*.db
+*.sqlite
+*.pid
+
+# Env files
+.env
+.env.*
+
+# OS files
+.DS_Store
+
+# Python
+*.log
