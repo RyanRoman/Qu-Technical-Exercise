@@ -1,21 +1,33 @@
 # Byte-compiled / cache files
 __pycache__/
 *.py[cod]
+*.pyo
 
-# Virtual environment
+# Virtual environments
 venv/
+.env/
+.env.*
 
-# Docker
+# Docker / DB artifacts
 *.db
 *.sqlite
 *.pid
+pgdata/
+docker-compose.override.yml
 
-# Env files
-.env
-.env.*
+# Local development artifacts
+*.log
+*.bak
+*.tmp
 
-# OS files
+# VSCode settings (optional)
+.vscode/
+
+# macOS
 .DS_Store
 
-# Python
-*.log
+# Test outputs
+htmlcov/
+coverage.xml
+.cache/
+.pytest_cache/
